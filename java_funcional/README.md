@@ -1,18 +1,45 @@
-## Getting Started
+Generación y Procesamiento de Notas en Java  
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Introducción  
+Este proyecto compara dos enfoques para procesar un conjunto de notas aleatorias en Java: imperativo y funcional.  
 
-## Folder Structure
+Generación de Datos  
+El programa genera una lista de notas aleatorias dentro del rango [1.0, 7.0]. La cantidad de notas es configurable y se generan usando "Random" y "Streams" de Java.  
 
-The workspace contains two folders by default, where:
+Procesamiento de Datos  
+Se implementan dos métodos para contar las notas en tres rangos específicos:  
+ Imperativo: Uso de bucles y condicionales.  
+ Funcional: Uso de "Streams" y expresiones lambda.  
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Diferencias entre Enfoques
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Enfoque Imperativo:
+Ventajas:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+  -Intuición: Es fácil de seguir y entender, especialmente para quienes tienen experiencia con lenguajes imperativos.
+  -Depuración: El código es más fácil de depurar debido a que los flujos de ejecución son explícitos.
 
-## Dependency Management
+Desventajas:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+  -Verboso: Requiere más líneas de código para lograr lo mismo.
+  -Escalabilidad: El código puede volverse difícil de mantener y modificar conforme crece el proyecto.
+
+Enfoque Funcional:
+Ventajas:
+
+  -Compacto y expresivo: Menos código para realizar la misma tarea, con mayor claridad en el propósito.
+  -Paralelismo: Uso eficiente de parallelStream() puede mejorar el rendimiento en operaciones grandes.
+
+Desventajas:
+
+  -Curva de aprendizaje: No es tan fácil de entender para programadores nuevos o no familiarizados con la programación funcional.
+  -Depuración compleja: Es más difícil rastrear problemas, ya que las operaciones en los Streams no son tan transparentes como los bucles tradicionales.
+
+Conclusiones
+  Imperativo: Preferible cuando la claridad y la depuración rápida son más importantes, o cuando el tamaño del proyecto es pequeño o mediano.
+
+  Funcional: Util en proyectos donde la eficiencia y la concisión son cruciales, y cuando el uso de paralelismo puede mejorar el rendimiento.
+
+Requisitos  
+  Java 11 o superior.  
+  
