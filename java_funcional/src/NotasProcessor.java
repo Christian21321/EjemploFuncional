@@ -9,7 +9,7 @@ public class NotasProcessor {
     // Método para generar un arreglo de notas aleatorias
     public static List<Double> generarNotas(int cantidad) {
         Random rand = new Random();
-        return DoubleStream.generate(() -> 1.0 + rand.nextDouble() * (5.0 - 1.0))
+        return DoubleStream.generate(() -> Math.round((1.0 + rand.nextDouble() * (5.0 - 1.0)) * 10) / 10.0)
                 .limit(cantidad)
                 .boxed()
                 .collect(Collectors.toList());
